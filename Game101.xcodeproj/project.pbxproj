@@ -27,6 +27,10 @@
 		4931011A196FEBC40029416D /* tank.png in Resources */ = {isa = PBXBuildFile; fileRef = 49310119196FEBC40029416D /* tank.png */; };
 		4931011C196FEE500029416D /* tank.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4931011B196FEE500029416D /* tank.wav */; };
 		4931011E196FEF040029416D /* explosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4931011D196FEF040029416D /* explosion.wav */; };
+		49310121196FF2D20029416D /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4931011F196FF2D20029416D /* Explosion.sks */; };
+		49310122196FF2D20029416D /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 49310120196FF2D20029416D /* spark.png */; };
+		49A29ECE196FF71C0095F016 /* snow.sks in Resources */ = {isa = PBXBuildFile; fileRef = 49A29ECD196FF71C0095F016 /* snow.sks */; };
+		49A29ED0196FF7380095F016 /* Tankfire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 49A29ECF196FF7380095F016 /* Tankfire.sks */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +70,10 @@
 		49310119196FEBC40029416D /* tank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tank.png; sourceTree = "<group>"; };
 		4931011B196FEE500029416D /* tank.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tank.wav; sourceTree = "<group>"; };
 		4931011D196FEF040029416D /* explosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = explosion.wav; sourceTree = "<group>"; };
+		4931011F196FF2D20029416D /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
+		49310120196FF2D20029416D /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		49A29ECD196FF71C0095F016 /* snow.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = snow.sks; sourceTree = "<group>"; };
+		49A29ECF196FF7380095F016 /* Tankfire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Tankfire.sks; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +148,10 @@
 				493100FA196FE7780029416D /* Spaceship.png */,
 				493100FC196FE7780029416D /* Images.xcassets */,
 				493100E6196FE7780029416D /* Supporting Files */,
+				4931011F196FF2D20029416D /* Explosion.sks */,
+				49310120196FF2D20029416D /* spark.png */,
+				49A29ECD196FF71C0095F016 /* snow.sks */,
+				49A29ECF196FF7380095F016 /* Tankfire.sks */,
 			);
 			path = Game101;
 			sourceTree = "<group>";
@@ -250,10 +262,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4931011C196FEE500029416D /* tank.wav in Resources */,
+				49310122196FF2D20029416D /* spark.png in Resources */,
+				49A29ECE196FF71C0095F016 /* snow.sks in Resources */,
 				493100EA196FE7780029416D /* InfoPlist.strings in Resources */,
 				4931011E196FEF040029416D /* explosion.wav in Resources */,
+				49A29ED0196FF7380095F016 /* Tankfire.sks in Resources */,
 				4931011A196FEBC40029416D /* tank.png in Resources */,
 				493100FD196FE7780029416D /* Images.xcassets in Resources */,
+				49310121196FF2D20029416D /* Explosion.sks in Resources */,
 				493100FB196FE7780029416D /* Spaceship.png in Resources */,
 				493100F3196FE7780029416D /* Main.storyboard in Resources */,
 			);
@@ -484,6 +500,7 @@
 				49310115196FE7780029416D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		49310116196FE7780029416D /* Build configuration list for PBXNativeTarget "Game101Tests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +509,7 @@
 				49310118196FE7780029416D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

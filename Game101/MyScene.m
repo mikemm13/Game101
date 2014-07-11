@@ -25,6 +25,10 @@
         
         [self addChild:myLabel];
         
+        NSString *snowParticleFile = [[NSBundle mainBundle] pathForResource:@"snow" ofType:@"sks"];
+        SKEmitterNode *snow = [NSKeyedUnarchiver unarchiveObjectWithFile:snowParticleFile];
+        [snow setPosition:myLabel.position];
+        [self addChild:snow];
         [self launchTanks];
     }
     return self;
@@ -32,7 +36,7 @@
 
 - (void)launchTanks{
     for (int i = 0; i<10; i++) {
-        CGPoint location = CGPointMake(0, self.frame.size.height * i);
+        CGPoint location = CGPointMake(0, self.frame.size.height - 50 * i);
         
         SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"tank"];
         
@@ -52,21 +56,33 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
     
-//    for (UITouch *touch in touches) {
-//        CGPoint location = [touch locationInNode:self];
-//        
-//        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"tank"];
-//        
-//        sprite.position = location;
-//        
-//        SKAction *action = [SKAction moveBy:CGVectorMake(100, 0) duration:2];
-//        SKAction *sound = [SKAction playSoundFileNamed:@"tank.wav" waitForCompletion:NO];
-//        
-//        [sprite runAction:sound];
-//        [sprite runAction:[SKAction repeatActionForever:action]];
-//        
-//        [self addChild:sprite];
-//    }
+    for (UITouch *touch in touches) {
+        CGPoint location = [touch locationInNode:self];
+    
+        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"tank"];
+        
+        SKAction *sound = [SKAction playSoundFileNamed:@"explosion.wav" waitForCompletion:YES];
+        NSString *fireParticleFile = [[NSBundle mainBundle] pathForResource:@"Tankfire" ofType:@"sks"];
+        SKEmitterNode *fire = [NSKeyedUnarchiver unarchiveObjectWithFile:fireParticleFile];
+        [fire setPosition:location];
+        [self addChild:fire];
+
+        
+        [sprite runAction:sound completion:^{
+            [fire removeFromParent];
+        }];
+        
+    
+        [self addChild:sprite];
+        
+        NSArray *nodes = [self nodesAtPoint:location];
+        for (SKNode *node in nodes) {
+            if ([node isKindOfClass:[SKSpriteNode class]]) {
+                [node removeFromParent];
+            }
+        }
+        
+    }
 }
 
 -(void)update:(CFTimeInterval)currentTime {
