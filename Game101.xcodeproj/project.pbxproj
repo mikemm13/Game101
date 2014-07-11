@@ -31,6 +31,7 @@
 		49310122196FF2D20029416D /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 49310120196FF2D20029416D /* spark.png */; };
 		49A29ECE196FF71C0095F016 /* snow.sks in Resources */ = {isa = PBXBuildFile; fileRef = 49A29ECD196FF71C0095F016 /* snow.sks */; };
 		49A29ED0196FF7380095F016 /* Tankfire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 49A29ECF196FF7380095F016 /* Tankfire.sks */; };
+		49A29ED4197000C90095F016 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49A29ED3197000C90095F016 /* background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		49310120196FF2D20029416D /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		49A29ECD196FF71C0095F016 /* snow.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = snow.sks; sourceTree = "<group>"; };
 		49A29ECF196FF7380095F016 /* Tankfire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Tankfire.sks; sourceTree = "<group>"; };
+		49A29ED3197000C90095F016 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 		493100E5196FE7770029416D /* Game101 */ = {
 			isa = PBXGroup;
 			children = (
+				49A29ED3197000C90095F016 /* background.jpg */,
 				4931011D196FEF040029416D /* explosion.wav */,
 				4931011B196FEE500029416D /* tank.wav */,
 				493100EE196FE7780029416D /* AppDelegate.h */,
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4931011C196FEE500029416D /* tank.wav in Resources */,
+				49A29ED4197000C90095F016 /* background.jpg in Resources */,
 				49310122196FF2D20029416D /* spark.png in Resources */,
 				49A29ECE196FF71C0095F016 /* snow.sks in Resources */,
 				493100EA196FE7780029416D /* InfoPlist.strings in Resources */,

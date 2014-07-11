@@ -14,8 +14,11 @@
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
-        self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
+        SKSpriteNode *sn = [SKSpriteNode spriteNodeWithImageNamed:@"background.jpg"];
+        sn.name = @"background";
+        sn.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+        [self addChild:sn];
         SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         
         myLabel.text = @"Tank War!";
@@ -30,6 +33,7 @@
         [snow setPosition:myLabel.position];
         [self addChild:snow];
         [self launchTanks];
+        
     }
     return self;
 }
@@ -42,12 +46,15 @@
         
         sprite.position = location;
         
-        SKAction *action = [SKAction moveBy:CGVectorMake(100, 0) duration:2];
-        SKAction *sound = [SKAction playSoundFileNamed:@"tank.wav" waitForCompletion:NO];
         
+        SKAction *action = [SKAction moveBy:CGVectorMake(100, -50) duration:2];
+        SKAction *sound = [SKAction playSoundFileNamed:@"tank.wav" waitForCompletion:NO];
+        SKAction *biggerScale = [SKAction scaleBy:4.0 duration:1];
+        SKAction *smallerScale = [SKAction scaleBy:0.25 duration:1];
         [sprite runAction:sound];
         [sprite runAction:[SKAction repeatActionForever:action]];
-        
+        [sprite runAction:[SKAction repeatActionForever:biggerScale]];
+        [sprite runAction:[SKAction repeatActionForever:smallerScale]];
         [self addChild:sprite];
     }
 
@@ -78,7 +85,9 @@
         NSArray *nodes = [self nodesAtPoint:location];
         for (SKNode *node in nodes) {
             if ([node isKindOfClass:[SKSpriteNode class]]) {
-                [node removeFromParent];
+                if (!node.name) {
+                    [node removeFromParent];                    
+                }
             }
         }
         
