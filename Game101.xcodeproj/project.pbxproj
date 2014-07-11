@@ -24,6 +24,9 @@
 		49310106196FE7780029416D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 493100E1196FE7770029416D /* UIKit.framework */; };
 		4931010E196FE7780029416D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4931010C196FE7780029416D /* InfoPlist.strings */; };
 		49310110196FE7780029416D /* Game101Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4931010F196FE7780029416D /* Game101Tests.m */; };
+		4931011A196FEBC40029416D /* tank.png in Resources */ = {isa = PBXBuildFile; fileRef = 49310119196FEBC40029416D /* tank.png */; };
+		4931011C196FEE500029416D /* tank.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4931011B196FEE500029416D /* tank.wav */; };
+		4931011E196FEF040029416D /* explosion.wav in Resources */ = {isa = PBXBuildFile; fileRef = 4931011D196FEF040029416D /* explosion.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,9 @@
 		4931010B196FE7780029416D /* Game101Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Game101Tests-Info.plist"; sourceTree = "<group>"; };
 		4931010D196FE7780029416D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4931010F196FE7780029416D /* Game101Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Game101Tests.m; sourceTree = "<group>"; };
+		49310119196FEBC40029416D /* tank.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tank.png; sourceTree = "<group>"; };
+		4931011B196FEE500029416D /* tank.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tank.wav; sourceTree = "<group>"; };
+		4931011D196FEF040029416D /* explosion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = explosion.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +127,10 @@
 		493100E5196FE7770029416D /* Game101 */ = {
 			isa = PBXGroup;
 			children = (
+				4931011D196FEF040029416D /* explosion.wav */,
+				4931011B196FEE500029416D /* tank.wav */,
 				493100EE196FE7780029416D /* AppDelegate.h */,
+				49310119196FEBC40029416D /* tank.png */,
 				493100EF196FE7780029416D /* AppDelegate.m */,
 				493100F1196FE7780029416D /* Main.storyboard */,
 				493100F4196FE7780029416D /* ViewController.h */,
@@ -240,7 +249,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4931011C196FEE500029416D /* tank.wav in Resources */,
 				493100EA196FE7780029416D /* InfoPlist.strings in Resources */,
+				4931011E196FEF040029416D /* explosion.wav in Resources */,
+				4931011A196FEBC40029416D /* tank.png in Resources */,
 				493100FD196FE7780029416D /* Images.xcassets in Resources */,
 				493100FB196FE7780029416D /* Spaceship.png in Resources */,
 				493100F3196FE7780029416D /* Main.storyboard in Resources */,

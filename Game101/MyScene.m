@@ -18,32 +18,55 @@
         
         SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
         
-        myLabel.text = @"Hello, World!";
+        myLabel.text = @"Tank War!";
         myLabel.fontSize = 30;
         myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                       CGRectGetMidY(self.frame));
+                                       self.frame.size.height - myLabel.frame.size.height);
         
         [self addChild:myLabel];
+        
+        [self launchTanks];
     }
     return self;
+}
+
+- (void)launchTanks{
+    for (int i = 0; i<10; i++) {
+        CGPoint location = CGPointMake(0, self.frame.size.height * i);
+        
+        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"tank"];
+        
+        sprite.position = location;
+        
+        SKAction *action = [SKAction moveBy:CGVectorMake(100, 0) duration:2];
+        SKAction *sound = [SKAction playSoundFileNamed:@"tank.wav" waitForCompletion:NO];
+        
+        [sprite runAction:sound];
+        [sprite runAction:[SKAction repeatActionForever:action]];
+        
+        [self addChild:sprite];
+    }
+
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     /* Called when a touch begins */
     
-    for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
-        
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        
-        sprite.position = location;
-        
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-        
-        [sprite runAction:[SKAction repeatActionForever:action]];
-        
-        [self addChild:sprite];
-    }
+//    for (UITouch *touch in touches) {
+//        CGPoint location = [touch locationInNode:self];
+//        
+//        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"tank"];
+//        
+//        sprite.position = location;
+//        
+//        SKAction *action = [SKAction moveBy:CGVectorMake(100, 0) duration:2];
+//        SKAction *sound = [SKAction playSoundFileNamed:@"tank.wav" waitForCompletion:NO];
+//        
+//        [sprite runAction:sound];
+//        [sprite runAction:[SKAction repeatActionForever:action]];
+//        
+//        [self addChild:sprite];
+//    }
 }
 
 -(void)update:(CFTimeInterval)currentTime {
