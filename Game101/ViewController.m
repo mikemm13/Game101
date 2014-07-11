@@ -9,6 +9,10 @@
 #import "ViewController.h"
 #import "MyScene.h"
 
+@interface ViewController ()
+@property (strong, nonatomic) SKScene *scene;
+@end
+
 @implementation ViewController
 
 - (void)viewDidLoad
@@ -21,11 +25,11 @@
     skView.showsNodeCount = YES;
     
     // Create and configure the scene.
-    SKScene * scene = [MyScene sceneWithSize:skView.bounds.size];
-    scene.scaleMode = SKSceneScaleModeAspectFill;
+    self.scene = [MyScene sceneWithSize:skView.bounds.size];
+    self.scene.scaleMode = SKSceneScaleModeAspectFill;
     
     // Present the scene.
-    [skView presentScene:scene];
+    [skView presentScene:self.scene];
 }
 
 - (BOOL)shouldAutorotate
@@ -50,6 +54,11 @@
 
 - (BOOL)prefersStatusBarHidden{
     return YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    self.scene.view.paused = YES;
 }
 
 @end
