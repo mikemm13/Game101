@@ -34,6 +34,7 @@
         [snow setPosition:myLabel.position];
         [self addChild:snow];
         [self launchTanks];
+        [self loadLions];
         
     }
     return self;
@@ -66,6 +67,24 @@
         [self addChild:sprite];
     }
 
+}
+
+- (void) loadLions{
+    SKSpriteNode *lion;
+    NSMutableArray *walkFrames = [NSMutableArray array];
+    
+    for (int i=1; i<=3; i++) {
+        NSString *textureName = [NSString stringWithFormat:@"lion%02d.png",i];
+        SKTexture *temp = [SKTexture textureWithImageNamed:textureName];
+        [walkFrames addObject:temp];
+    }
+    
+    lion = [SKSpriteNode spriteNodeWithTexture:walkFrames[0]];
+    lion.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+    [self addChild:lion];
+    
+    [lion runAction:[SKAction repeatActionForever:[SKAction animateWithTextures:walkFrames timePerFrame:0.1f resize:NO restore:YES]] withKey:@"lionAnimating"];
+    
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {

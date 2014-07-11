@@ -32,6 +32,11 @@
 		49A29ECE196FF71C0095F016 /* snow.sks in Resources */ = {isa = PBXBuildFile; fileRef = 49A29ECD196FF71C0095F016 /* snow.sks */; };
 		49A29ED0196FF7380095F016 /* Tankfire.sks in Resources */ = {isa = PBXBuildFile; fileRef = 49A29ECF196FF7380095F016 /* Tankfire.sks */; };
 		49A29ED4197000C90095F016 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 49A29ED3197000C90095F016 /* background.jpg */; };
+		49A29EDB19701B930095F016 /* lion01.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A29ED619701B930095F016 /* lion01.png */; };
+		49A29EDC19701B930095F016 /* lion02.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A29ED719701B930095F016 /* lion02.png */; };
+		49A29EDD19701B930095F016 /* lion03.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A29ED819701B930095F016 /* lion03.png */; };
+		49A29EDE19701B930095F016 /* lion04.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A29ED919701B930095F016 /* lion04.png */; };
+		49A29EDF19701B930095F016 /* lion05.png in Resources */ = {isa = PBXBuildFile; fileRef = 49A29EDA19701B930095F016 /* lion05.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +81,11 @@
 		49A29ECD196FF71C0095F016 /* snow.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = snow.sks; sourceTree = "<group>"; };
 		49A29ECF196FF7380095F016 /* Tankfire.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Tankfire.sks; sourceTree = "<group>"; };
 		49A29ED3197000C90095F016 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		49A29ED619701B930095F016 /* lion01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lion01.png; sourceTree = "<group>"; };
+		49A29ED719701B930095F016 /* lion02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lion02.png; sourceTree = "<group>"; };
+		49A29ED819701B930095F016 /* lion03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lion03.png; sourceTree = "<group>"; };
+		49A29ED919701B930095F016 /* lion04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lion04.png; sourceTree = "<group>"; };
+		49A29EDA19701B930095F016 /* lion05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lion05.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +147,7 @@
 		493100E5196FE7770029416D /* Game101 */ = {
 			isa = PBXGroup;
 			children = (
+				49A29ED519701B930095F016 /* lions */,
 				49A29ED3197000C90095F016 /* background.jpg */,
 				4931011D196FEF040029416D /* explosion.wav */,
 				4931011B196FEE500029416D /* tank.wav */,
@@ -186,6 +197,18 @@
 				4931010C196FE7780029416D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		49A29ED519701B930095F016 /* lions */ = {
+			isa = PBXGroup;
+			children = (
+				49A29ED619701B930095F016 /* lion01.png */,
+				49A29ED719701B930095F016 /* lion02.png */,
+				49A29ED819701B930095F016 /* lion03.png */,
+				49A29ED919701B930095F016 /* lion04.png */,
+				49A29EDA19701B930095F016 /* lion05.png */,
+			);
+			path = lions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,11 +287,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A29EDD19701B930095F016 /* lion03.png in Resources */,
 				4931011C196FEE500029416D /* tank.wav in Resources */,
 				49A29ED4197000C90095F016 /* background.jpg in Resources */,
+				49A29EDE19701B930095F016 /* lion04.png in Resources */,
+				49A29EDB19701B930095F016 /* lion01.png in Resources */,
 				49310122196FF2D20029416D /* spark.png in Resources */,
 				49A29ECE196FF71C0095F016 /* snow.sks in Resources */,
 				493100EA196FE7780029416D /* InfoPlist.strings in Resources */,
+				49A29EDF19701B930095F016 /* lion05.png in Resources */,
 				4931011E196FEF040029416D /* explosion.wav in Resources */,
 				49A29ED0196FF7380095F016 /* Tankfire.sks in Resources */,
 				4931011A196FEBC40029416D /* tank.png in Resources */,
@@ -276,6 +303,7 @@
 				49310121196FF2D20029416D /* Explosion.sks in Resources */,
 				493100FB196FE7780029416D /* Spaceship.png in Resources */,
 				493100F3196FE7780029416D /* Main.storyboard in Resources */,
+				49A29EDC19701B930095F016 /* lion02.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
