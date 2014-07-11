@@ -25,6 +25,7 @@
         myLabel.fontSize = 30;
         myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
                                        self.frame.size.height - myLabel.frame.size.height);
+        myLabel.fontColor = [UIColor whiteColor];
         
         [self addChild:myLabel];
         
@@ -46,8 +47,15 @@
         
         sprite.position = location;
         
-        
-        SKAction *action = [SKAction moveBy:CGVectorMake(100, -50) duration:2];
+        int yCoordOdd = -1 * (arc4random()%100);
+        int yCoordEven = arc4random()%100;
+        CGVector vector;
+        if (i%2 == 0) {
+            vector = CGVectorMake(100, yCoordEven);
+        } else {
+            vector = CGVectorMake(100, yCoordOdd);
+        }
+        SKAction *action = [SKAction moveBy:vector duration:2];
         SKAction *sound = [SKAction playSoundFileNamed:@"tank.wav" waitForCompletion:NO];
         SKAction *biggerScale = [SKAction scaleBy:4.0 duration:1];
         SKAction *smallerScale = [SKAction scaleBy:0.25 duration:1];
